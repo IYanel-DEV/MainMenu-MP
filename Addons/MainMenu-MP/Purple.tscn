@@ -1,0 +1,320 @@
+[gd_scene load_steps=9 format=3 uid="uid://crqrn4pmgaewe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_11"]
+resource_name = "theme_toggle_button"
+bg_color = Color(0.6, 0.4, 0.8, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.6, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2"]
+resource_name = "purple_button_hover"
+bg_color = Color(0.5, 0.3, 0.7, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7, 0.5, 0.9, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1"]
+resource_name = "purple_button_normal"
+bg_color = Color(0.4, 0.2, 0.6, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6, 0.4, 0.8, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3"]
+resource_name = "purple_button_pressed"
+bg_color = Color(0.6, 0.4, 0.8, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.6, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Theme" id="Theme_1"]
+Button/styles/focus = SubResource("StyleBoxFlat_2")
+Button/styles/hover = SubResource("StyleBoxFlat_2")
+Button/styles/normal = SubResource("StyleBoxFlat_1")
+Button/styles/pressed = SubResource("StyleBoxFlat_3")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5"]
+resource_name = "purple_panel"
+bg_color = Color(0.2, 0.1, 0.4, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5, 0.3, 0.7, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4"]
+resource_name = "purple_input"
+bg_color = Color(0.3, 0.1, 0.5, 0.8)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.6, 0.4, 0.8, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Theme" id="Theme_2"]
+LineEdit/styles/focus = SubResource("StyleBoxFlat_4")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_4")
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.1, 0.05, 0.2, 1)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="MainContainer" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ThemeToggleBtn" type="Button" parent="UI/MainContainer"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_top = 15.0
+offset_right = -20.0
+offset_bottom = 50.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/focus = SubResource("StyleBoxFlat_11")
+theme_override_styles/hover = SubResource("StyleBoxFlat_11")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_11")
+theme_override_styles/normal = SubResource("StyleBoxFlat_11")
+text = "🎨 THEME"
+
+[node name="Title" type="Label" parent="UI/MainContainer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -250.0
+offset_right = 150.0
+offset_bottom = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.8, 0.6, 1, 1)
+theme_override_font_sizes/font_size = 48
+text = "GAME TITLE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuButtons" type="VBoxContainer" parent="UI/MainContainer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -120.0
+offset_right = 100.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_1")
+
+[node name="HostGameBtn" type="Button" parent="UI/MainContainer/MenuButtons"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "HOST GAME"
+
+[node name="JoinGameBtn" type="Button" parent="UI/MainContainer/MenuButtons"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "JOIN GAME"
+
+[node name="ServerBrowserBtn" type="Button" parent="UI/MainContainer/MenuButtons"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "SERVER BROWSER"
+
+[node name="VSeparator" type="VSeparator" parent="UI/MainContainer/MenuButtons"]
+layout_mode = 2
+
+[node name="SettingsBtn" type="Button" parent="UI/MainContainer/MenuButtons"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "SETTINGS"
+
+[node name="QuitBtn" type="Button" parent="UI/MainContainer/MenuButtons"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "QUIT"
+
+[node name="PlayerInfoPanel" type="Panel" parent="UI/MainContainer"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -120.0
+offset_right = 280.0
+offset_bottom = -20.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MainContainer/PlayerInfoPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 10.0
+offset_right = -15.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayerNameLabel" type="Label" parent="UI/MainContainer/PlayerInfoPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.6, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "Player Name:"
+
+[node name="PlayerNameInput" type="LineEdit" parent="UI/MainContainer/PlayerInfoPanel/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_2")
+theme_override_colors/font_color = Color(0.9, 0.8, 1, 1)
+placeholder_text = "Enter your name..."
+max_length = 20
+
+[node name="HSeparator" type="HSeparator" parent="UI/MainContainer/PlayerInfoPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="StatusLabel" type="Label" parent="UI/MainContainer/PlayerInfoPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.5, 0.9, 1)
+theme_override_font_sizes/font_size = 12
+text = "Status: Offline"
+
+[node name="NetworkInfoPanel" type="Panel" parent="UI/MainContainer"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -280.0
+offset_top = -126.0
+offset_right = -20.0
+offset_bottom = -26.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MainContainer/NetworkInfoPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 10.0
+offset_right = -15.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NetworkLabel" type="Label" parent="UI/MainContainer/NetworkInfoPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.6, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "Network Info:"
+
+[node name="IPLabel" type="Label" parent="UI/MainContainer/NetworkInfoPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.5, 0.9, 1)
+theme_override_font_sizes/font_size = 11
+text = "IP: 127.0.0.1"
+
+[node name="PortLabel" type="Label" parent="UI/MainContainer/NetworkInfoPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.5, 0.9, 1)
+theme_override_font_sizes/font_size = 11
+text = "Port: 7000"
+
+[node name="PlayersLabel" type="Label" parent="UI/MainContainer/NetworkInfoPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.5, 0.9, 1)
+theme_override_font_sizes/font_size = 11
+text = "Players: 0/8"
+
+[node name="VersionLabel" type="Label" parent="UI/MainContainer"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -25.0
+offset_right = -10.0
+offset_bottom = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.5, 0.3, 0.7, 0.8)
+theme_override_font_sizes/font_size = 10
+text = "v1.0.0 - Made by Yanel"
+horizontal_alignment = 2
+
+[node name="ConnectionStatusIcon" type="ColorRect" parent="UI/MainContainer"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 125.0
+offset_top = -41.0
+offset_right = 135.0
+offset_bottom = -31.0
+grow_vertical = 0
+color = Color(0.8, 0.2, 0.2, 1)
